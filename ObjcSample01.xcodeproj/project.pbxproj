@@ -14,6 +14,7 @@
 		D422BBD92451354E00151E51 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D422BBD82451354E00151E51 /* Assets.xcassets */; };
 		D422BBDC2451354E00151E51 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D422BBDA2451354E00151E51 /* LaunchScreen.storyboard */; };
 		D422BBDF2451354E00151E51 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D422BBDE2451354E00151E51 /* main.m */; };
+		D422BBEB245136B500151E51 /* DebugLog.m in Sources */ = {isa = PBXBuildFile; fileRef = D422BBEA245136B500151E51 /* DebugLog.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,8 @@
 		D422BBDB2451354E00151E51 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D422BBDD2451354E00151E51 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D422BBDE2451354E00151E51 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		D422BBE9245136B500151E51 /* DebugLog.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DebugLog.h; sourceTree = "<group>"; };
+		D422BBEA245136B500151E51 /* DebugLog.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DebugLog.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +64,7 @@
 		D422BBCB2451354D00151E51 /* ObjcSample01 */ = {
 			isa = PBXGroup;
 			children = (
+				D422BBE5245135F300151E51 /* samples */,
 				D422BBCC2451354D00151E51 /* AppDelegate.h */,
 				D422BBCD2451354D00151E51 /* AppDelegate.m */,
 				D422BBCF2451354D00151E51 /* SceneDelegate.h */,
@@ -74,6 +78,15 @@
 				D422BBDE2451354E00151E51 /* main.m */,
 			);
 			path = ObjcSample01;
+			sourceTree = "<group>";
+		};
+		D422BBE5245135F300151E51 /* samples */ = {
+			isa = PBXGroup;
+			children = (
+				D422BBE9245136B500151E51 /* DebugLog.h */,
+				D422BBEA245136B500151E51 /* DebugLog.m */,
+			);
+			path = samples;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -148,6 +161,7 @@
 			files = (
 				D422BBD42451354D00151E51 /* ViewController.m in Sources */,
 				D422BBCE2451354D00151E51 /* AppDelegate.m in Sources */,
+				D422BBEB245136B500151E51 /* DebugLog.m in Sources */,
 				D422BBDF2451354E00151E51 /* main.m in Sources */,
 				D422BBD12451354D00151E51 /* SceneDelegate.m in Sources */,
 			);
