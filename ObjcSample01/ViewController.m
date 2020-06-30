@@ -5,7 +5,7 @@
 
 #import "ViewController.h"
 
-#import "samples/DebugLog.h"
+#import "DebugLog.h"
 
 #define TAG @"ViewController"
 
@@ -18,49 +18,81 @@
 - (void)loadView {
 	[super loadView];
 
-	[DebugLog debug:TAG comment:@"loadView"];
+    DebugLog(@"%@: loadView",TAG);
 }
 
 - (void)viewDidLoad {
 	[super viewDidLoad];
 	// Do any additional setup after loading the view.
-	[DebugLog debug:TAG comment:@"viewDidLoad"];
+    DebugLog(@"%@: viewDidLoad",TAG);
+
+    [self loadFromDocument];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
 	[super viewWillAppear:animated];
 	
-	[DebugLog debug:TAG comment:@"viewWillAppear"];
+    DebugLog(@"%@: viewWillAppear",TAG);
 }
 
 - (void)viewWillLayoutSubviews {
 	[super viewWillLayoutSubviews];
 	
-	[DebugLog debug:TAG comment:@"viewWillLayoutSubviews"];
+    DebugLog(@"%@: viewWillLayoutSubviews",TAG);
 }
 
 - (void)viewDidLayoutSubviews {
 	[super viewDidLayoutSubviews];
 	
-	[DebugLog debug:TAG comment:@"viewDidLayoutSubviews"];
+    DebugLog(@"%@: viewDidLayoutSubviews",TAG);
 }
 
 - (void)viewDidAppear:(BOOL)animated {
 	[super viewDidAppear:animated];
 	
-	[DebugLog debug:TAG comment:@"viewDidAppear"];
+    DebugLog(@"%@: viewDidAppear",TAG);
 }
 
 - (void)viewWillDisappear:(BOOL)animated {
 	[super viewWillDisappear:animated];
 	
-	[DebugLog warning:TAG comment:@"viewWillDisappear"];
+    DebugLog(@"%@: viewWillDisappear",TAG);
 }
 
 - (void)viewDidDisappear:(BOOL)animated {
 	[super viewDidDisappear:animated];
 	
-	[DebugLog warning:TAG comment:@"viewDidDisappear"];
+    DebugLog(@"%@: viewDidDisappear",TAG);
+}
+
+- (void)loadFromDocument
+{
+    // /Documentのパスの取得
+    NSArray* paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString* path = paths[0];
+    DebugLog(@"%@ PATH = %@", TAG, path);
+    // ファイル名の作成
+    NSString *filename = [path stringByAppendingPathComponent:@"sample.txt"];
+    DebugLog(@"%@ Filename = %@", TAG, filename);
+    // ファイルの存在確認
+    NSFileManager* fm = [NSFileManager defaultManager];
+    if (![fm fileExistsAtPath:path]) {
+        // NSStringオブジェクト
+        NSString *sample = @"Hello, World";
+        // ファイルへの保存
+        if (![sample writeToFile:filename atomically:YES encoding:NSUTF8StringEncoding error:nil]) {
+            DebugLog(@"%@ Failed to write to file", TAG);
+            return;
+        }
+    }
+    // ファルからの読込み
+    NSString *content = [NSString stringWithContentsOfFile:filename encoding:NSUTF8StringEncoding error:nil];
+    if (content == nil) {
+        DebugLog(@"%@ Error:", TAG);
+    }
+    else {
+        DebugLog(@"%@ Content: %@", TAG, content);
+    }
 }
 
 @end

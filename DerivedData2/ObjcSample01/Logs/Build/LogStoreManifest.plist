@@ -6,7 +6,7 @@
 	<integer>10</integer>
 	<key>logs</key>
 	<dict>
-		<key>D3D564E7-70BA-4F3C-99C3-D28E10306E09</key>
+		<key>33A600D0-A273-400F-BE00-137FB42221D9</key>
 		<dict>
 			<key>className</key>
 			<string>IDEActivityLogSection</string>
@@ -15,7 +15,7 @@
 			<key>domainType</key>
 			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
 			<key>fileName</key>
-			<string>D3D564E7-70BA-4F3C-99C3-D28E10306E09.xcactivitylog</string>
+			<string>33A600D0-A273-400F-BE00-137FB42221D9.xcactivitylog</string>
 			<key>hasPrimaryLog</key>
 			<true/>
 			<key>primaryObservable</key>
@@ -32,13 +32,47 @@
 			<key>signature</key>
 			<string>Build ObjcSample01</string>
 			<key>timeStartedRecording</key>
-			<real>609310830.36425996</real>
+			<real>615174853.59706199</real>
 			<key>timeStoppedRecording</key>
-			<real>609310830.75988901</real>
+			<real>615174853.96335196</real>
 			<key>title</key>
 			<string>Build ObjcSample01</string>
 			<key>uniqueIdentifier</key>
-			<string>D3D564E7-70BA-4F3C-99C3-D28E10306E09</string>
+			<string>33A600D0-A273-400F-BE00-137FB42221D9</string>
+		</dict>
+		<key>3CA0FD3D-C51A-491A-97E7-B0555EC6CF7C</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>3CA0FD3D-C51A-491A-97E7-B0555EC6CF7C.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>ObjcSample01 project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>ObjcSample01</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build ObjcSample01</string>
+			<key>timeStartedRecording</key>
+			<real>615177579.44437003</real>
+			<key>timeStoppedRecording</key>
+			<real>615177579.79292095</real>
+			<key>title</key>
+			<string>Build ObjcSample01</string>
+			<key>uniqueIdentifier</key>
+			<string>3CA0FD3D-C51A-491A-97E7-B0555EC6CF7C</string>
 		</dict>
 	</dict>
 </dict>
