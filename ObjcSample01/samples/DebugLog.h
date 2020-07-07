@@ -5,4 +5,8 @@
 
 #import <Foundation/Foundation.h>
 
-extern void DebugLog(NSString *format, ...);
+@interface DebugLog : NSObject
+
+void printLog(const char* funcName, NSString *format, ...);
+
+@end

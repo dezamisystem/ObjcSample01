@@ -5,12 +5,16 @@
 
 #import "DebugLog.h"
 
-void DebugLog(NSString *format, ...)
+@implementation DebugLog
+
+void printLog(const char* funcName, NSString *format, ...)
 {
-#if DEBUG
     va_list args;
     va_start(args, format);
-    NSLogv(format, args);
+    format = [format stringByAppendingString:@"\n"];
+    NSString* message = [[NSString alloc] initWithFormat:[NSString stringWithFormat:@"%@",format] arguments:args];
     va_end(args);
-#endif
+    printf("D: %s; %s", funcName, [message UTF8String]);
 }
+
+@end

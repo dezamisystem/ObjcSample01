@@ -18,51 +18,52 @@
 - (void)loadView {
 	[super loadView];
 
-    DebugLog(@"%@: loadView",TAG);
+    printLog(__PRETTY_FUNCTION__, @"Hoge");
 }
 
 - (void)viewDidLoad {
 	[super viewDidLoad];
 	// Do any additional setup after loading the view.
-    DebugLog(@"%@: viewDidLoad",TAG);
 
-    [self loadFromDocument];
+    printLog(__PRETTY_FUNCTION__, @"Hogege");
+
+//    [self loadFromDocument];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
 	[super viewWillAppear:animated];
 	
-    DebugLog(@"%@: viewWillAppear",TAG);
+    printLog(__PRETTY_FUNCTION__, @"Hogegegeg");
 }
 
 - (void)viewWillLayoutSubviews {
 	[super viewWillLayoutSubviews];
 	
-    DebugLog(@"%@: viewWillLayoutSubviews",TAG);
+    printLog(__PRETTY_FUNCTION__, @"Hogehoge");
 }
 
 - (void)viewDidLayoutSubviews {
 	[super viewDidLayoutSubviews];
 	
-    DebugLog(@"%@: viewDidLayoutSubviews",TAG);
+    printLog(__PRETTY_FUNCTION__, @"Geogeo");
 }
 
 - (void)viewDidAppear:(BOOL)animated {
 	[super viewDidAppear:animated];
 	
-    DebugLog(@"%@: viewDidAppear",TAG);
+    printLog(__PRETTY_FUNCTION__, @"Gegegege");
 }
 
 - (void)viewWillDisappear:(BOOL)animated {
 	[super viewWillDisappear:animated];
 	
-    DebugLog(@"%@: viewWillDisappear",TAG);
+    printLog(__PRETTY_FUNCTION__, @"");
 }
 
 - (void)viewDidDisappear:(BOOL)animated {
 	[super viewDidDisappear:animated];
 	
-    DebugLog(@"%@: viewDidDisappear",TAG);
+    printLog(__PRETTY_FUNCTION__, @"");
 }
 
 - (void)loadFromDocument
@@ -70,10 +71,10 @@
     // /Documentのパスの取得
     NSArray* paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
     NSString* path = paths[0];
-    DebugLog(@"%@ PATH = %@", TAG, path);
+    printLog(__PRETTY_FUNCTION__, @"PATH=%@", path);
     // ファイル名の作成
     NSString *filename = [path stringByAppendingPathComponent:@"sample.txt"];
-    DebugLog(@"%@ Filename = %@", TAG, filename);
+    printLog(__PRETTY_FUNCTION__, @"Filename=%@", filename);
     // ファイルの存在確認
     NSFileManager* fm = [NSFileManager defaultManager];
     if (![fm fileExistsAtPath:path]) {
@@ -81,17 +82,17 @@
         NSString *sample = @"Hello, World";
         // ファイルへの保存
         if (![sample writeToFile:filename atomically:YES encoding:NSUTF8StringEncoding error:nil]) {
-            DebugLog(@"%@ Failed to write to file", TAG);
+            printLog(__PRETTY_FUNCTION__, @"Failed to write to file");
             return;
         }
     }
     // ファルからの読込み
     NSString *content = [NSString stringWithContentsOfFile:filename encoding:NSUTF8StringEncoding error:nil];
     if (content == nil) {
-        DebugLog(@"%@ Error:", TAG);
+        printLog(__PRETTY_FUNCTION__, @"Error");
     }
     else {
-        DebugLog(@"%@ Content: %@", TAG, content);
+        printLog(__PRETTY_FUNCTION__, @"Content: %@", content);
     }
 }
 
